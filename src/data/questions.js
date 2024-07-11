@@ -1,7 +1,7 @@
 const questions = [
     {
       id: 1,
-      question: "What is the correct way to declare a variable in JavaScript?",
+      question: "What is the correct way to declare a variable in JavaScript? ",
       options: [
         "var x = 5;",
         "let x = 5;",
