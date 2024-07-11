@@ -3,11 +3,67 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.layout {
+  height: 100vh;
+}
+
+.content {
+  padding: 20px;
+  height: calc(100vh - 65px);
+}
+
+.logo {
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-family: cursive;
+  font-size: 20px;
+}
+
+.question-container {
+  padding: 16px 24px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+.option {
+  cursor: pointer;
+  border: 1px solid #0000002b;
+  padding: 10px 8px;
+  border-radius: 6px;
+  margin: 8px 0px;
+}
+
+.option:hover {
+  background-color: aliceblue;
+}
+
+.option.selected-option {
+  background-color: #74fa7461 !important;
+}
+
+.btn {
+  box-shadow: unset !important;
+}
+
+.btn:active,.btn:hover ,.btn:focus-visible {
+  color: unset !important;
+  border-color: #d9d9d9 !important;
+  outline: unset !important;
+}
+
+.next-btn {
+  background-color: antiquewhite !important;
+}
+
+.prev-btn {
+  background-color: rgb(167, 165, 163) !important;
 }
