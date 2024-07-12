@@ -15,7 +15,7 @@ function Navigation() {
   const totalQuestions = questions?.length;
   const handleNext = () => {
     if (answers[currentQuestion] === null) {
-        alert("Please select an answer before proceeding to the next question...");
+        alert("Please select an answer before proceeding to the next question");
       } else {
         dispatch(nextQuestion());
       }
