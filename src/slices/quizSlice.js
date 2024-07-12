@@ -1,4 +1,4 @@
-// src/slices/quizSlice.js
+
 import { createSlice } from "@reduxjs/toolkit";
 import questions from "../data/questions";
 
