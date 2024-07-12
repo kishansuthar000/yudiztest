@@ -24,7 +24,7 @@ function Question() {
             <Col
               onClick={() => dispatch(answerQuestion(option))}
               className={`option ${
-                answers[currentQuestion] === option ? "selected-option" : " "
+                answers[currentQuestion] === option ? "selected-option" : ""
               }`}
               span={24}
               key={i}
