@@ -11,6 +11,7 @@ const initialState = {
 
 const calculateScore = (answers) => {
   const score = answers.reduce((score, answer, idx) => {
+    debugger
     let ques = questions[idx];
     let cAns = questions[idx]?.correctAnswer;
     if (answer === ques.options[cAns]) {
@@ -30,7 +31,7 @@ const quizSlice = createSlice({
       state.score = calculateScore(state.answers);
     },
     nextQuestion: (state) => {
-      if (state.answers[state.currentQuestion] !== null) {
+      if (state.answers[state.currentQuestion]) {
         state.currentQuestion += 1;
       }
     },
@@ -38,9 +39,7 @@ const quizSlice = createSlice({
       state.currentQuestion -= 1;
     },
     submitQuiz: (state) => {
-      if (!state.answers.includes(null)) {
         state.submitted = true;
-      }
     },
     resetQuiz: (state) => {
       if (state.submitted) {

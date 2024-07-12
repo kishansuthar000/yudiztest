@@ -13,11 +13,13 @@ function Navigation() {
   const currentQuestion = useSelector((state) => state.quiz.currentQuestion);
   const answers = useSelector((state) => state.quiz.answers);
   const totalQuestions = questions?.length;
+
+
   const handleNext = () => {
-    if (answers[currentQuestion] === null) {
+    if (answers[currentQuestion]) {
+      dispatch(nextQuestion());
+    } else {
         alert("Please select an answer before proceeding to the next question");
-      } else {
-        dispatch(nextQuestion());
       }
   };
 
@@ -26,10 +28,10 @@ function Navigation() {
   };
 
   const handleSubmit = () => {
-    if (answers[currentQuestion] === null) {
-        alert("Please select an answer before submitting.");
-      } else {
-        dispatch(submitQuiz());
+    if (answers[currentQuestion]) {
+      dispatch(submitQuiz());
+    } else {
+      alert("Please select an answer before submitting.");
       }
   };
   return (
